@@ -7,7 +7,7 @@ import TheFooter from './components/TheFooter.vue';
 export default {
 
 
-  components:{
+  components: {
     TheHeader,
     TheMain,
     TheFooter
@@ -18,7 +18,6 @@ export default {
 
 
 <template>
-
   <TheHeader></TheHeader>
 
   <TheMain></TheMain>
@@ -26,4 +25,8 @@ export default {
   <TheFooter></TheFooter>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+html {
+  height: 100vh;
+}
+</style>
