@@ -11,7 +11,7 @@ export default {
 <template>
     <header>
 
-        <nav class="navbar navbar-expand-lg bg-dark">
+        <nav class="navbar nav-position navbar-expand-lg bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="#">Logo</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -58,4 +58,11 @@ export default {
 </template>
 
 
-<style lang="scss"></style>
+<style lang="scss">
+.nav-position{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+
+}
+</style>

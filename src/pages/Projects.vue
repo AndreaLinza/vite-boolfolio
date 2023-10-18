@@ -4,41 +4,42 @@ import ProjectCard from '../components/ProjectCard.vue';
 
 export default {
 
-    components:{
+    components: {
         ProjectCard
     },
     data() {
 
-return {
-    projects: [],
-    pagination: {}
-}
-},
-methods: {
-fetchData(url) {
-    axios.get(url ?? 'http://127.0.0.1:8000/api/projects')
-        .then((response) => {
+        return {
+            projects: [],
+            pagination: {}
+        }
+    },
+    methods: {
+        fetchData(url) {
+            axios.get(url ?? 'http://127.0.0.1:8000/api/projects')
+                .then((response) => {
 
-            //Andiamo a salvare la risposta in una costante
-            const results = response.data;
+                    //Andiamo a salvare la risposta in una costante
+                    const results = response.data;
 
-            //Salviamo la lista dei progetti nella variabile projects
-            this.projects = results.data;
+                    //Salviamo la lista dei progetti nella variabile projects
+                    this.projects = results.data;
 
-            //Elimino la chiave data dall'oggetto risultati
-            delete results.data;
+                    //Elimino la chiave data dall'oggetto risultati
+                    delete results.data;
 
-            //Salvo i dati della paginazione nella variabile pagination
-            this.pagination = results;
-            console.log(results)
-        })
-},
+                    //Salvo i dati della paginazione nella variabile pagination
+                    this.pagination = results;
+                    console.log(results)
+                })
+        },
 
-},
 
-mounted() {
-this.fetchData();
-}
+    },
+
+    mounted() {
+        this.fetchData();
+    }
 }
 
 </script>
@@ -52,7 +53,10 @@ this.fetchData();
 
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 border p-4 rounded shadow-lg mt-3 g-4">
                 <div class="col" v-for="project in projects" :key="project.id">
-                    <ProjectCard :card="project"></ProjectCard>
+                    <router-link :to="{ name: 'project.show', params: { slug: project.slug } }">
+                        <ProjectCard :card="project"></ProjectCard>
+                    </router-link>
+
                 </div>
             </div>
         </div>

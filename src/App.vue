@@ -27,6 +27,10 @@ export default {
 
 <style lang="scss">
 html {
-  height: 100vh;
+    height: 100% !important;
+}
+
+body {
+    height: 100% !important;
 }
 </style>

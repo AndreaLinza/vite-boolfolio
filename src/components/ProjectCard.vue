@@ -26,7 +26,7 @@ export default {
     <div class="card h-100">
         <img :src="getThumbUrl(card)" class="card-img-top h-100" alt="...">
         <div class="card-body">
-            <h5 class="card-title">{{ card.title }}</h5>
+            <h5 class="card-title text-decoration-none">{{ card.title }}</h5>
             <p class="card-text">{{ card.description }}</p>
             <p class="badge" :style="`background-color: rgb(${card.type.color})`">
                 {{ card.type.name }}</p>
@@ -36,11 +36,10 @@ export default {
                         :style="`background-color:rgb(${technology.color}); width:30px; aspect-ratio:1/1`"></i>
                 </div>
             </div>
-
-            <a href="{{ card.link }}" class="">Link</a>
+            <!-- <a :href="card.link" class="">Link</a> -->
         </div>
+        
     </div>
 </template>
-
 
 <style lang="scss" scoped></style>

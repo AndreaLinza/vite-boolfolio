@@ -50,29 +50,15 @@ export default {
         <!-- Possiamo vederlo come lo @yield di Blade-->
         <router-view></router-view>
 
-        <!-- <div class="container">
-            <h1>Hello My Friend</h1>
-
-            Card  
-            <div class="card p-5">
-
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 border p-4 rounded shadow-lg mt-3 g-4">
-                    <div class="col" v-for="project in projects" :key="project.id">
-                        <ProjectCard :card="project"></ProjectCard>
-                    </div>
-                </div>
-            </div>
-
-            Paginazione  
-            <div class="d-flex justify-content-center">
-                <a v-for="pageLink in pagination.links" class="btn btn primary" @click="fetchData(pageLink.url)"
-                    v-html="pageLink.label"></a>
-            </div>
-
-
-        </div> -->
+        
     </main>
 </template>
 
 
-<style lang="scss"></style>
+<style lang="scss">
+main{
+    padding-top: 5rem;
+    height: 100% !important;
+}
+
+</style>
