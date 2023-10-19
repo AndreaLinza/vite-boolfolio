@@ -58,8 +58,7 @@ export default {
                 <small class="card-text">{{ formatDate(project.release) }}</small>
             </div>
             <div class="d-flex m-auto">
-                <router-link :to="{name:'projects'}">Indietro</router-link>
-                <!-- <a  class="my-button h-75 m-3"><span>Indietro</span></a> -->
+                <router-link class="text-decoration-none" :to="{name:'projects'}">Indietro</router-link>
             </div>
         </div>
     </div>

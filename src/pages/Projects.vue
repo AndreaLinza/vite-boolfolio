@@ -53,7 +53,7 @@ export default {
 
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 border p-4 rounded shadow-lg mt-3 g-4">
                 <div class="col" v-for="project in projects" :key="project.id">
-                    <router-link :to="{ name: 'project.show', params: { slug: project.slug } }">
+                    <router-link class="text-decoration-none" :to="{ name: 'project.show', params: { slug: project.slug } }">
                         <ProjectCard :card="project"></ProjectCard>
                     </router-link>
 
