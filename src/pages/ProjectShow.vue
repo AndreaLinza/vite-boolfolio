@@ -11,7 +11,7 @@ export default {
 
     methods: {
         fetchData() {
-            //this.route  definishe un oggetto relativo alla rotta attuale
+            //this.route  definisce un oggetto relativo alla rotta attuale
 
             axios.get("http://localhost:8000/api/projects/" + this.$route.params.slug)
                 .then(resp => {

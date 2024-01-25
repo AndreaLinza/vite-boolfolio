@@ -16,7 +16,5 @@ export default {
 
 
 <style lang="scss" scoped>
-footer{
-    margin-top: 5rem;
-}
+
 </style>

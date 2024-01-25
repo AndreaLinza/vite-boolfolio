@@ -20,17 +20,21 @@ export default {
 <template>
   <TheHeader></TheHeader>
 
-  <TheMain></TheMain>
+  <main>
+
+    <!-- Possiamo vederlo come lo @yield di Blade-->
+    <router-view></router-view>
+
+
+  </main>
 
   <TheFooter></TheFooter>
 </template>
 
 <style lang="scss">
-html {
-    height: 100% !important;
-}
 
-body {
-    height: 100% !important;
+main{
+  flex-grow: 1;
+
 }
 </style>

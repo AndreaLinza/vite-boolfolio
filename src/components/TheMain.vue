@@ -45,20 +45,11 @@ export default {
 </script>
 
 <template>
-    <main>
-
-        <!-- Possiamo vederlo come lo @yield di Blade-->
-        <router-view></router-view>
-
-        
-    </main>
+    
 </template>
 
 
 <style lang="scss">
-main{
-    padding-top: 5rem;
-    height: 100% !important;
-}
+
 
 </style>
