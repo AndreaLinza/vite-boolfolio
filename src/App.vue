@@ -28,6 +28,7 @@ export default {
 
 <style lang="scss">
 main {
+  padding: 7rem 0;
   flex-grow: 1;
 
 }

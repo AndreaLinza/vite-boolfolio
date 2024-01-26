@@ -8,9 +8,14 @@ export default {
 
 <template>
     <div class="container">
-        <h1 class="">HomePage</h1>
+        <h1 class="">HomePage Payeturo</h1>
     </div>
 </template>
 
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+@use "../styles/partials/variables" as *;
+
+
+
+</style>
