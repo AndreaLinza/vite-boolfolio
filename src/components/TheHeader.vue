@@ -1,5 +1,5 @@
 <script>
-import Home from '../pages/Home.vue';
+import {store} from "../store";
 
 
 export default {
@@ -59,6 +59,7 @@ export default {
 
 
 <style lang="scss">
+
 .nav-position{
     position: fixed;
     width: 100%;

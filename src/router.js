@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 
+
 //importiamo le pagine 
 
 import HomePage from './pages/Home.vue';
@@ -46,7 +47,7 @@ const routes = [
 
 
     // Utilizziamo questa rotta per tutte le rotte che non sono definite
-    // inoltre la mettiamo sotto tutte le altrre rotte
+    // inoltre la mettiamo sotto tutte le altre rotte
     {
         path: "/:pathMatch(.*)*",
         name: 'not-found',
