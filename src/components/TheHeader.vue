@@ -8,14 +8,15 @@ export default {
 
 <template>
   <header>
-    <nav class="navbar nav-position navbar-expand-lg bg-dark">
-      <div class="container">
-        <router-link class="navbar-brand" aria-current="page" :to="{ name: 'home' }">Logo</router-link>
+    <nav class="navbar nav-position navbar-expand-lg shadow">
+      <div class="container-fluid">
+        <router-link class="navbar-brand ms-3" aria-current="page" :to="{ name: 'home' }"><img class="logo"
+            src="/LogoV.png" alt="Logo"></router-link>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="d-flex justify-content-end">
+        <div class="d-flex justify-content-end me-5">
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
@@ -31,11 +32,11 @@ export default {
                 <router-link class="nav-link" :to="{ name: 'contacts' }">Contatti</router-link>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button"
-                  data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
                   Login
                 </a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu dropdown-menu-end">
                   <li><a class="dropdown-item" href="http://127.0.0.1:8000/login">Accedi</a></li>
                 </ul>
               </li>
@@ -52,26 +53,33 @@ export default {
 <style lang="scss" scoped >
 @use "../styles/partials/variables" as *;
 
-  nav{
-    position: fixed;
-    width: 100%;
-    z-index: 10;
-    padding: 1rem 0;
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  padding: 1rem 0;
 
-    .navbar-brand{
-      color: white;
-    }
+  background-color: transparent !important;
+  transition: ease-out .5s;
 
-    .nav-link{
+  .logo {
+    max-width: 50px;
+  }
 
-        color: white;
+  .navbar-brand {
+    color: white;
+  }
 
-        &:active, &:focus{
-          color: aqua;
-        }
+  .nav-link {
+    font-size: 1.1rem;
 
+    &:active,
+    &:focus {
+      color:$secondary-color;
+      font-weight: bolder;
     }
 
   }
 
+}
 </style>

@@ -1,14 +1,19 @@
 <script>
+import Jumbosection from '../components/HomeComponent/Jumbosection.vue';
+
 
 export default {
-
+    components: { Jumbosection }
 }
 
 </script>
 
 <template>
+    <Jumbosection></Jumbosection>
     <div class="container">
-        <h1 class="">HomePage Payeturo</h1>
+        <div class="desciption">
+            <h1 class="z-5 position-relative">HomePage Payeturo</h1>
+        </div>
     </div>
 </template>
 
@@ -16,6 +21,8 @@ export default {
 <style lang="scss" scoped>
 @use "../styles/partials/variables" as *;
 
-
+.desciption{
+    padding-top: 10rem;
+}
 
 </style>

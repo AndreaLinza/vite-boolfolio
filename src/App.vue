@@ -1,6 +1,7 @@
 <script>
 import TheHeader from './components/TheHeader.vue';
 import TheFooter from './components/TheFooter.vue';
+import Jumbosection from './components/HomeComponent/Jumbosection.vue';
 //import axios from 'axios';
 
 export default {
@@ -8,8 +9,9 @@ export default {
 
   components: {
     TheHeader,
-    TheFooter
-  }
+    TheFooter,
+    Jumbosection
+}
 
 }
 </script>
@@ -28,8 +30,6 @@ export default {
 
 <style lang="scss">
 main {
-  padding: 7rem 0;
   flex-grow: 1;
-
 }
 </style>
