@@ -8,41 +8,44 @@ export default {
 
 <template>
   <header>
-    <nav class="navbar nav-position navbar-expand-lg shadow">
+    <nav class="navbar nav-position navbar-expand-lg bg-body-tertiary shadow">
       <div class="container-fluid">
-        <router-link class="navbar-brand ms-3" aria-current="page" :to="{ name: 'home' }"><img class="logo"
-            src="/LogoV.png" alt="Logo"></router-link>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        <div class="d-flex align-items-center justify-content-between w-100">
+          <div>
+            <router-link class="navbar-brand ms-3" aria-current="page" :to="{ name: 'home' }"><img class="logo"
+                src="/LogoB.png" alt="Logo"></router-link>
+          </div>
+          <div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <router-link class="nav-link" aria-current="page" :to="{ name: 'home' }">Home</router-link>
+                </li>
+                <li class="nav-item">
+                  <router-link class="nav-link" :to="{ name: 'projects' }">Progetti</router-link>
+                </li>
+                <li class="nav-item">
+                  <router-link class="nav-link" :to="{ name: 'about' }">About</router-link>
+                </li>
+                <li class="nav-item">
+                  <router-link class="nav-link" :to="{ name: 'contacts' }">Contatti</router-link>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Login
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="http://127.0.0.1:8000/login">Accedi</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="d-flex justify-content-end me-5">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <router-link class="nav-link" aria-current="page" :to="{ name: 'home' }">Home</router-link>
-              </li>
-              <li class="nav-item">
-                <router-link class="nav-link" :to="{ name: 'projects' }">Progetti</router-link>
-              </li>
-              <li class="nav-item">
-                <router-link class="nav-link" :to="{ name: 'about' }">About</router-link>
-              </li>
-              <li class="nav-item">
-                <router-link class="nav-link" :to="{ name: 'contacts' }">Contatti</router-link>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Login
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item" href="http://127.0.0.1:8000/login">Accedi</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-
         </div>
       </div>
     </nav>
@@ -75,7 +78,7 @@ export default {
 
     &:active,
     &:focus {
-      color:$secondary-color;
+      color: $secondary-color;
       font-weight: bolder;
     }
 

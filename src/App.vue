@@ -11,7 +11,7 @@ export default {
     TheHeader,
     TheFooter,
     Jumbosection
-}
+  }
 
 }
 </script>
@@ -30,6 +30,11 @@ export default {
 
 <style lang="scss">
 main {
+  background-image: url('/layered-steps-haikei.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 10rem;
   flex-grow: 1;
 }
 </style>
